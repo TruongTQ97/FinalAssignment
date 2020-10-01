@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link th:href="@{/css/login.css}" rel="stylesheet" />
+    <link rel="stylesheet"  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossOrigin="anonymous"
+    />
+</head>
+<body>
+<p th:if="${param.error}" class="error">Invalid email or password</p>
+<p th:if="${param.logout}" class="success">You have been logged out</p>
+<h3>Login to continue</h3>
+
+<form  th:action="@{/login}" method="POST" class="login-form" autocomplete="off" >
+    <input type="email" name="email" placeholder="admin@gmail.com" value="admin@gmail.com"/>
+    <div class="input-icon">
+        <input type="password" name="password" placeholder="Password" value="admin1234"/>
+        <i class="fa fa-eye show-password"></i>
+    </div>
+    <a href="#" class="forgot">Forgot password?</a>
+    <button type="submit">Sign in</button>
+    <a href="/user/registration">Sign up</a>
+</form>
+
+<script>
+    const loginForm = document.querySelector(".login-form");
+    const showPasswordIcon = loginForm && loginForm.querySelector(".show-password");
+    const inputPassword =   loginForm && loginForm.querySelector('input[type="password"');
+    showPasswordIcon.addEventListener("click", function () {
+        const inputPasswordType = inputPassword.getAttribute("type");
+        inputPasswordType === "password" ? inputPassword.setAttribute("type", "text") : inputPassword.setAttribute("type", "password");
+    });
+</script>
+</body>
+</html>
+

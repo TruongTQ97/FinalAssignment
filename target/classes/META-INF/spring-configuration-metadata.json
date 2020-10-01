@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.truongtq6.finalassignment.config.FileConfigProperties",
+      "sourceType": "com.truongtq6.finalassignment.config.FileConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.file-expired-time",
+      "type": "java.lang.Integer",
+      "sourceType": "com.truongtq6.finalassignment.config.FileConfigProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "file.file-uri",
+      "type": "java.lang.String",
+      "sourceType": "com.truongtq6.finalassignment.config.FileConfigProperties"
+    }
+  ],
+  "hints": []
+}
