@@ -41,7 +41,7 @@ public class DataSeedingListener implements ApplicationListener<ContextRefreshed
         RoleEntity savedAdmin = saveOrUpdateRole(CommonConstants.ROLE_ADMIN);
         RoleEntity savedMember = saveOrUpdateRole(CommonConstants.ROLE_MEMBER);
 
-        String adminUsername = "admin@gmail.com";
+        String adminUsername = "truong@gmail.com";
         String password = "admin123";
 
         // Admin account
